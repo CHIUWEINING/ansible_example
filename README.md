@@ -1,5 +1,7 @@
 # ansible_example
-### 1. please create your own inventory named by your ip and put it in /all_hosts(dynamic_inv.py would use your ip to search the json file of inventory)(the two json files in /all_hosts are two examples)
+### 1. please create your own inventory named by your ip and put it in /all_hosts
+#### * dynamic_inv.py would use your ip to search the json file of inventory
+#### * the two json files in /all_hosts are two examples
 ### 2. execute the playbook `deploy.yml`
 ```bash
 ## push
