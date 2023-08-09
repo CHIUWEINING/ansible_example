@@ -1,0 +1,17 @@
+- name: Deploy to All Server Groups
+  hosts: all
+  tasks:
+    - debug:
+        msg: "Host {{ inventory_hostname }} belongs to groups: {{ group_names }}"
+
+    - include_role:
+        name: common
+      when: "'common' in group_names"
+
+    - include_role:
+        name: group1
+      when: "'group1' in group_names"
+
+    - include_role:
+        name: group2
+      when: "'group2' in group_names"

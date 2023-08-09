@@ -1,0 +1,38 @@
+{   
+    "common":{
+        "hosts": ["server0","server1","localhost"],
+        "vars": {}
+    },
+    "group1": {
+        "hosts": ["server0","server1"],
+        "vars": {}
+    },
+    "group2":{
+        "hosts": ["server0"],
+        "vars": {}
+    },
+    "_meta": {
+        "hostvars": {
+            "server0": {
+                "ansible_ssh_port": 49152,
+                "ansible_connection":"ssh",
+                "ansible_user":"root",
+                "ansible_ssh_pass" : "admin",
+                "ansible_ssh_host": "127.0.0.1",
+                "ansible_ssh_common_args" : "-o StrictHostKeyChecking=no"
+            },
+            "server1":{
+                "ansible_ssh_port": 49153,
+                "ansible_connection":"ssh",
+                "ansible_user":"root",
+                "ansible_ssh_pass" : "admin",
+                "ansible_ssh_host": "127.0.0.1",
+                "ansible_ssh_common_args" : "-o StrictHostKeyChecking=no"
+            },
+            "localhost":{
+                "ansible_connection":"local"
+            }
+            
+        }
+    }
+}

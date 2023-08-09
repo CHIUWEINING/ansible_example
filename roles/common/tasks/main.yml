@@ -1,0 +1,4 @@
+---
+- name: Print a Message from common
+  debug:
+    msg: "Hello, this is a simple message from common!"
