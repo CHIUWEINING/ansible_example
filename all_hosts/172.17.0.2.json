@@ -1,17 +1,23 @@
 {
-    "group": {
+    "common":{
+        "hosts": ["develop","localhost"],
+        "vars": {}
+    },
+    "group1": {
         "hosts": ["develop"],
-        "vars": {
-            "ansible_connection":"ssh",
-            "ansible_ssh_common_args" : "-o StrictHostKeyChecking=no"
-        }
+        "vars": {}
     },
     "_meta": {
         "hostvars": {
             "develop": {
                 "ansible_user":"develop",
                 "ansible_ssh_pass" : "odVi62FJ",
-                "ansible_ssh_host": "192.168.1.221"
+                "ansible_ssh_host": "192.168.1.221",
+                "ansible_connection":"ssh",
+                "ansible_ssh_common_args" : "-o StrictHostKeyChecking=no"
+            },
+            "localhost":{
+                "ansible_connection":"local"
             }
         }
     }
