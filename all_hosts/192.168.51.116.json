@@ -1,14 +1,16 @@
 {   
     "common":{
-        "hosts": ["server0","server1","localhost"],
-        "vars": {}
+        "hosts": ["localhost"],
+        "vars": {},
+        "children": [ "group1" ]
     },
     "group1": {
-        "hosts": ["server0","server1"],
-        "vars": {}
+        "hosts": ["server0"],
+        "vars": {},
+        "children" : ["group2"]
     },
     "group2":{
-        "hosts": ["server0"],
+        "hosts": ["server1"],
         "vars": {}
     },
     "_meta": {

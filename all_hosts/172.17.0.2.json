@@ -1,7 +1,8 @@
 {
     "common":{
-        "hosts": ["develop","localhost"],
-        "vars": {}
+        "hosts": ["localhost"],
+        "vars": {},
+        "children" : ["group1"]
     },
     "group1": {
         "hosts": ["develop"],
